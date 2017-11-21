@@ -1,0 +1,49 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="A web application that tests your browser's support of modern client-side storage tecniques and its privacy settings">
+      <meta name="author" content="Stefano Belloro">
+      <title>Storage Watcher</title>
+      <link href="src/styles.css"" rel="stylesheet">
+    </head>
+    <body>
+      <div class="container">
+        <h1>Storage Watcher</h1>
+        <p class="lead">A web application that tests your browser's support of modern client-side storage tecniques and its privacy settings
+        </p>
+
+        <p><b>Test 1 - API support:</b> Some browsers disable certain APIs when used in 'incognito' mode. Simply try to add an entry to the storage system by pressing 'Add Entry' and click on 'List all entries'.</p>
+        <p><b>Test 2 - Data deletion:</b> After completing test 1, remove your personal data from your browser, then click on 'List all entries'. All storage should be empty, but if any entry is still there it means that your browser did not actually delete locally stored data.</p>
+        <p>
+          Run the tests on <br/>
+          <ul>
+            <li>
+              <input type="checkbox" class="webStorage" id="webStorageCheck" name="webStorage" checked>
+              <label for="webStorage">Web Storage (localStorage)</label>
+            </li>
+            <li>
+              <input type="checkbox" class="indexedDB" id="indexedDBCheck" name="indexedDB" checked>
+              <label for="indexedDB">Indexed Database API</label>
+            </li>
+            <li>
+              <input type="checkbox" class="webSQLDB" id="webSQLDBCheck" name="webSQLDB" checked>
+              <label for="webSQLDB">Web SQL Database</label>
+            </li>
+          </ul>
+        </p>
+        <p>
+        <button class="btn-me" id="readAll">List all entries</button>
+        <button class="btn-me" id="addEntry">Add Entry</button>
+        </p>        
+        <p>Created by Stefano Belloro</p>
+      </div>
+      <script src="src/webstorage.js"></script>
+      <script src="src/indexeddb.js"></script>
+      <script src="src/websql.js"></script>
+
+      <script src="src/ui.js"></script>
+
+      </script>
+    </body>
+  </html>
