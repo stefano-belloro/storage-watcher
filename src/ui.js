@@ -11,8 +11,16 @@
   var addEntry = document.getElementById('addEntry')
   var readAll = document.getElementById('readAll')
 
-  idbOps.createdb()
-  websqlOps.createdb()
+  if (window.indexedDB) {
+    idbOps.createdb()
+  } else {
+    alert('Your browser does not support Indexed DB')
+  }
+  if (window.openDatabase) {
+    websqlOps.createdb() 
+  } else {
+    alert('Your browser does not support Web SQL DB')
+  }
 
   storageWatcher = {}
   storageWatcher.readAll = function() {
