@@ -23,13 +23,6 @@ if (window.localStorage) {
 }
 
 // Indexed Database API
-
-//prefixes of implementation that we want to test
-//window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-
-//prefixes of window.IDB objects
-//window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-
 if (window.indexedDB) {
   var idb = {};
   var db;
@@ -80,12 +73,9 @@ if (window.indexedDB) {
   $('input.indexedDB').attr('disabled', true).attr('checked', false);
 }
 
-
 // Web SQL Database
 if (window.openDatabase) {
   var webSQLdb = {};
-
-//  webSQLdb.db = null;
 
   webSQLdb.open = function() {
     webSQLdb.db = openDatabase('Items', '1', 'Items Store', 1024 * 1024);
@@ -133,7 +123,6 @@ if (window.openDatabase) {
 
 } else {
   window.alert('Your browser does not support Web SQL Database')
-  //$('input.webSQLDB').attr('disabled', true).attr('checked', false);
 }
 
 // DOM elements
@@ -155,7 +144,6 @@ storageWatcher.readAll = function() {
     webSQLdb.readAll();
   }
 }
-
 
 storageWatcher.add = function() {
   if (webStorageCheck.checked) {  
