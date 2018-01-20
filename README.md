@@ -2,7 +2,9 @@
 A web application that tests your browser's support of modern client-side storage techniques and its privacy settings.
 
 ## Requirements
-This is a static front-end web application. It does not require a web server to run, however, it needs to be loaded on a browser over HTTP in oder to work.
+This is a static front-end web application. Even though it does not contain server-side scripts, it needs to be loaded in the context of a domain in order to function.
 
 ## How to run it
-Simply upload the contnet 
+Simply upload the content of this project to a web server of your choice.
+Alternatively, simply navigate to https://s3-eu-west-1.amazonaws.com/storage-watcher/index.html
+
