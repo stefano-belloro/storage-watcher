@@ -1,9 +1,5 @@
 (function() {
 
-
-  // To DO: window prop checks 
-  // Init properly
-
   // DOM elements
   var webStorageCheck = document.getElementById('webStorageCheck')
   var indexedDBCheck = document.getElementById('indexedDBCheck')
