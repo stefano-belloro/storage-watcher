@@ -11,7 +11,6 @@
 
     request.onsuccess = function(e) {
       db = e.target.result;
-      console.log('success: '+ db);
     }
 
     request.onerror = function(e) {

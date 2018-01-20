@@ -34,7 +34,6 @@ if (window.indexedDB) {
 
   idb.request.onsuccess = function(event) {
     db = idb.request.result;
-    console.log('success: '+ db);
   };
 
   idb.request.onupgradeneeded = function(event) {
