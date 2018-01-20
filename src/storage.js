@@ -1,7 +1,5 @@
 // Created by Stefano Belloro, as part of a cybersecurity study
 
-
-
 // Local Storage
 if (window.localStorage) {
   var lcs = {};
