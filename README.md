@@ -2,7 +2,7 @@
 A web application that tests your browser's support of modern client-side storage techniques and its privacy settings.
 
 ## Requirements
-This is a static front-end web application. Even though it does not contain server-side scripts, it needs to be loaded in the context of a domain in order to function.
+This is a static front-end web application. Even though it does not contain server-side scripts, it needs to be loaded in the context of a web domain in order to function.
 
 ## How to run it
 Simply upload the content of this project to a web server of your choice.
