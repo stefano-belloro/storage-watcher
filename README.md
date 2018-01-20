@@ -6,5 +6,5 @@ This is a front-end web application. Even though it does not contain server-side
 
 ## How to run it
 Upload the content of this project to a web server of your choice.
-Alternatively, simply navigate to https://s3-eu-west-1.amazonaws.com/storage-watcher/index.html
+Alternatively, simply navigate to http://sb-storage-watcher.s3-website-eu-west-1.amazonaws.com/
 
