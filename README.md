@@ -10,3 +10,5 @@ Alternatively, simply navigate to http://sb-storage-watcher.s3-website-eu-west-1
 
 ## Credits
 This is an open-source project tested with BrowserStack
+![BrowserStack](Browserstack-logo@2x.png "BrowserStack")
+
