@@ -8,3 +8,5 @@ This is a front-end web application. Even though it does not contain server-side
 Upload the content of this project to a web server of your choice.
 Alternatively, simply navigate to http://sb-storage-watcher.s3-website-eu-west-1.amazonaws.com/
 
+## Credits
+This is an open-source project tested with BrowserStack
