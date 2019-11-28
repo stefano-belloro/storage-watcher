@@ -25,7 +25,7 @@
     objectStore.openCursor().onsuccess = function(event) {
        var cursor = event.target.result;
        if (cursor) {
-          alert('IndexedDB Value ' + cursor.value.id + ' added on: ' + cursor.value.added_on);
+          storageWatcher.display('IndexedDB Value ' + cursor.value.id + ' added on: ' + cursor.value.added_on);
           cursor.continue();
        }
     };
@@ -41,11 +41,11 @@
     var request = objectStore.add(item)
 
     request.onsuccess = function(event) {
-       alert('An item has been added to IndexedDB.')
+       storageWatcher.display('An item has been added to IndexedDB.')
     }
 
     request.onerror = function(event) {
-       alert('Unable to add data')
+       storageWatcher.display('Unable to add data')
     }
   }
 }
