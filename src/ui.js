@@ -6,19 +6,30 @@
   var webSQLDBCheck = document.getElementById('webSQLDBCheck')
   var addEntry = document.getElementById('addEntry')
   var readAll = document.getElementById('readAll')
+  var clearLogs = document.getElementById('clearLogs')
+  var messageBox = document.getElementById('messageBox')
+
+  storageWatcher = {}
+
+  storageWatcher.display = function (message) {
+    //alert(message);
+    console.log(message)
+    var messagePar = document.createElement('p')
+    messagePar.innerText = message
+    messageBox.appendChild(messagePar)
+  }
 
   if (window.indexedDB) {
     idbOps.createdb()
   } else {
-    alert('Your browser does not support Indexed DB')
+    storageWatcher.display('Your browser does not support Indexed DB')
   }
   if (window.openDatabase) {
     websqlOps.createdb() 
   } else {
-    alert('Your browser does not support Web SQL DB')
+    storageWatcher.display('Your browser does not support Web SQL DB')
   }
 
-  storageWatcher = {}
   storageWatcher.readAll = function() {
     if (webStorageCheck.checked) {  
       webstorageOps.readAll();
@@ -37,7 +48,7 @@
       try {
         webstorageOps.add();
       } catch (err) {
-        alert('Failed to Add to Web Storage')
+        storageWatcher.display('Failed to Add to Web Storage')
       }
     }
 
@@ -45,7 +56,7 @@
       try {
         idbOps.add();
       } catch (err) {
-        alert('Failed to add to IndexedDB')
+        storageWatcher.display('Failed to add to IndexedDB')
       }
     }
 
@@ -53,16 +64,20 @@
       try {
         websqlOps.add();
       } catch (err) {
-        alert('Failed to add to Web SQL DB')
+        storageWatcher.display('Failed to add to Web SQL DB')
       }
     }
   }
 
-  addEntry.onclick=function(){
+  addEntry.onclick = function() {
     storageWatcher.add()
   }
 
-  readAll.onclick=function(){
+  readAll.onclick = function(){
     storageWatcher.readAll()
+  }
+
+  clearLogs.onclick = function() {
+    messageBox.innerHTML = ''
   }
 })()

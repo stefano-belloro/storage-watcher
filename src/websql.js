@@ -15,7 +15,7 @@ websqlOps = {
       var addedOn = new Date();
       tx.executeSql('INSERT INTO items(item, added_on) VALUES (?,?)',
           ['test', addedOn],
-          alert('An item has been added to Web SQL DB'),
+          storageWatcher.display('An item has been added to Web SQL DB'),
           onError);
      })
   },
@@ -30,12 +30,12 @@ websqlOps = {
   },
 
   onError: function(tx, e) {
-    alert('There has been an error: ' + e.message)
+    storageWatcher.display('There has been an error: ' + e.message)
   },
 
   callback: function (tx, rs) {
     for (var i=0; i < rs.rows.length; i++) {
-      alert('Web SQL Database Value ' + rs.rows.item(i).ID + ' added on: ' + rs.rows.item(i).added_on);
+      storageWatcher.display('Web SQL Database Value ' + rs.rows.item(i).ID + ' added on: ' + rs.rows.item(i).added_on);
     }
   }
 }
